@@ -11,9 +11,12 @@ let outputEl = document.getElementById("container");
 function drawDataArray() {
   let outputStr = "";
   for (let val of data) {
-    outputStr += `<div style="height:${}px">${val}</div>`;
+    let divHeight = (val / maxVal) * 600;
+    outputStr += `<div style="height:${divHeight}px">${val}</div>`;
   }
   outputEl.innerHTML = outputStr;
 }
 
+// Draw Data Array every 200ms
+setInterval(drawDataArray, 200);
 drawDataArray();
