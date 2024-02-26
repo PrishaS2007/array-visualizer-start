@@ -9,12 +9,9 @@ let outputEl = document.getElementById("container");
 
 // Tranverse to Display Data Arrray
 function drawDataArray() {
-  let outputStr = " ";
-  for (let i = 0; i < data.length; i++) {
-    outputStr += `<div>${data[i]}</div>`;
-  }
+  let outputStr = "";
   for (let val of data) {
-    outputStr += `<div>${val[i]}</div>`;
+    outputStr += `<div>${val}</div>`;
   }
   outputEl.innerHTML = outputStr;
 }
