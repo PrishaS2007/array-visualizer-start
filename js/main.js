@@ -11,7 +11,7 @@ let outputEl = document.getElementById("container");
 function drawDataArray() {
   let outputStr = "";
   for (let val of data) {
-    outputStr += `<div>${val}</div>`;
+    outputStr += `<div style="height:${}px">${val}</div>`;
   }
   outputEl.innerHTML = outputStr;
 }
