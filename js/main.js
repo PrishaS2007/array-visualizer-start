@@ -1,8 +1,11 @@
 // Array Visualizer Start
 
 // Global Variables
-let data = [1, 2, 3, 5, 8, 7, 4, 4, 1, 0, 8, 9, 10, 7];
-let maxVal = 10; // max data value
+let data = [];
+for (let n = 1; n <= 50; n++) {
+  data.push(randomInt(0, 101));
+}
+let maxVal = 100; // max data value
 
 // HTML Variables
 let outputEl = document.getElementById("container");
@@ -12,7 +15,7 @@ function drawDataArray() {
   let outputStr = "";
   for (let val of data) {
     let divHeight = (val / maxVal) * 600;
-    outputStr += `<div style="height:${divHeight}px">${val}</div>`;
+    outputStr += `<div style="height:${divHeight}px"></div>`;
   }
   outputEl.innerHTML = outputStr;
 }
